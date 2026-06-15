@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>착한놈들</title>
+
+<link rel="stylesheet" href="mogiri.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo gradient-text">착한놈들</div>
+
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="discord.html">Discord</a></li>
+        <li><a href="roblox.html">Roblox</a></li>
+    </ul>
+
+</nav>
+
+<!-- MAIN PORTAL -->
+<section class="portal">
+
+    <!-- SLIDER -->
+    <div class="slider">
+        <img id="slideImage" src="쥐.jpg" alt="member">
+    </div>
+
+    <!-- TITLE -->
+    <div class="portal-center">
+
+        <h1 class="portal-title gradient-text">
+            착한놈들
+        </h1>
+
+        <p class="portal-sub">
+            Member Portal System
+        </p>
+
+        <!-- SEARCH BOX -->
+        <div class="search-box">
+            <input type="text" placeholder="멤버, Discord, Roblox 검색 (기능 없음)">
+            <button>검색</button>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="quick-links">
+            <a href="members.html">👥 Members</a>
+            <a href="discord.html">💬 Discord</a>
+            <a href="roblox.html">🎮 Roblox</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SLIDER SCRIPT -->
+<script>
+
+const images = [
+    "쥐.jpg",
+    "수연.jpg",
+    "말랑.jpg",
+    "김치.jpg",
+    "나리.jpg",
+    "홧트.jpg",
+    "르구.jpg",
+    "말히.jpg"
+];
+
+let index = 0;
+
+function changeImage() {
+    const img = document.getElementById("slideImage");
+
+    index = (index + 1) % images.length;
+    img.src = images[index];
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const img = document.getElementById("slideImage");
+
+    img.src = images[0];
+    setInterval(changeImage, 2500);
+});
+
+</script>
+
+</body>
+</html>
